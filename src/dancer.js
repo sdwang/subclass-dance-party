@@ -1,21 +1,21 @@
 var Dancer = function(name, thresholds, location) {
   // make node and append
   
-  var makeDancerElement = function(name) {
+  var makeDancerElement = function(name, location) {
     // hold array of image links for body
 
     // make node
-    var $node = $('<div class="dancer" style="float: left;"></div>')
+    var $node = $('<div class="dancer" style="float: ' + location + ';"></div>')
     // set location
     // set image
-    var image = '<img src="img/' + name + '"' + 'alt="' + name + '"/>'
+    var image = '<img src="img/' + name + '.gif"' + 'alt="' + name + '"/>'
     // append to document
     $node.append(image);
     //return node
     return $node;
   }
 
-  this.$node;
+  this.$node = makeDancerElement(name, location);
   this.thresholds = thresholds;
   this.intensityLevel = 0;
   // time between steps

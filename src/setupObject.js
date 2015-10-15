@@ -3,7 +3,7 @@ var setup = function () {
 
   var makeDancers = function() {
     var dancers = [];
-    var location = [[],[]];
+    var location = ['left','right'];
     var names = ["fred", "allen"];
 
     var generateThresholds = function() {
@@ -14,9 +14,10 @@ var setup = function () {
       return thresholds;
     };
 
-    for (var i = 0; i < 1; i++) {
+    for (var i = 0; i < 2; i++) {
       var dancer = new Dancer(names[i], generateThresholds(), location[i]);
       dancers.push(dancer);
+      $('.dancerContainer').append(dancer.$node);
     }
     return dancers;
   };
