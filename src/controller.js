@@ -1,6 +1,7 @@
 var Controller = function(danceManager, intensityObject, musicManager) {
   this.danceManager = danceManager;
   this.intensityObject = intensityObject;
+  this.musicManager = musicManager;
 }
 
 Controller.prototype.intensityButtonHandler = function() {

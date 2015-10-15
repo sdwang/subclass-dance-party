@@ -45,12 +45,12 @@ Dancer.prototype.increaseIntensityLevel = function() {
 
 Dancer.prototype.changeAnimation = function() {
   if(this.intensityLevel >= 3) {
+    var event = new Event('explode');
+    document.dispatchEvent(event);
     var newImage = '<img src="img/explosion.gif"' + 'alt="defeated!" width="355px" height="535px"/>'
-    musicManager.explosion();
   } else {
     var newImage = '<img class="dancerImage" src="img/' + this.name + this.intensityLevel + '.gif"' + 'alt="' + this.name + '"/>'
   }
-  $('#' + this.name).empty();
   $('#' + this.name).append(newImage);
-
+  $('#' + this.name).empty();
 }
