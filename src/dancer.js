@@ -49,8 +49,8 @@ Dancer.prototype.changeAnimation = function() {
     document.dispatchEvent(event);
     var newImage = '<img src="img/explosion.gif"' + 'alt="defeated!" width="355px" height="535px"/>'
   } else {
-    var newImage = '<img class="dancerImage" src="img/' + this.name + this.intensityLevel + '.gif"' + 'alt="' + this.name + '"/>'
+    var newImage = '<img class="dancerImage" src="img/' + this.name + this.intensityLevel + '.gif"' + 'alt="' + this.name + '" width="365px"/>'
   }
-  $('#' + this.name).append(newImage);
   $('#' + this.name).empty();
+  $('#' + this.name).append(newImage);
 }
