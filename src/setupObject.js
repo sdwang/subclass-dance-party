@@ -8,9 +8,9 @@ var setup = function () {
 
     var generateThresholds = function() {
       var thresholds = [];
-      thresholds[0] = 10 + Math.floor(Math.random() * 20);
-      thresholds[1] = 30 + Math.floor(Math.random() * 20);
-      thresholds[2] = 50 + Math.floor(Math.random() * 20);
+      thresholds[0] = 10 + Math.floor(Math.random() * 30);
+      thresholds[1] = 40 + Math.floor(Math.random() * 30);
+      thresholds[2] = 60 + Math.floor(Math.random() * 30);
       return thresholds;
     };
 
@@ -24,9 +24,11 @@ var setup = function () {
 
   var danceManager = new DanceManager(makeDancers());
 
+  var musicManager = new MusicManager();
+
   var intensityObject = new IntensityObject();
 
-  window.danceApp.controller = new Controller(danceManager, intensityObject);
+  window.danceApp.controller = new Controller(danceManager, intensityObject, musicManager);
 
   // think about fading out logo and other things here
 };

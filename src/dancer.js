@@ -46,6 +46,7 @@ Dancer.prototype.increaseIntensityLevel = function() {
 Dancer.prototype.changeAnimation = function() {
   if(this.intensityLevel >= 3) {
     var newImage = '<img src="img/explosion.gif"' + 'alt="defeated!" width="355px" height="535px"/>'
+    musicManager.explosion();
   } else {
     var newImage = '<img class="dancerImage" src="img/' + this.name + this.intensityLevel + '.gif"' + 'alt="' + this.name + '"/>'
   }

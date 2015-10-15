@@ -1,4 +1,4 @@
-var Controller = function(danceManager, intensityObject) {
+var Controller = function(danceManager, intensityObject, musicManager) {
   this.danceManager = danceManager;
   this.intensityObject = intensityObject;
 }
@@ -12,4 +12,5 @@ Controller.prototype.intensityButtonHandler = function() {
   this.intensityObject.increaseIntensity();
   var currentIntensity = this.intensityObject.getIntensity();
   this.danceManager.setIntensity(currentIntensity)
+  this.musicManager.setPlaybackRate(currentIntensity);
 };

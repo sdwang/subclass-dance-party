@@ -5,7 +5,7 @@ var IntensityObject = function() {
 };
 
 IntensityObject.prototype.increaseIntensity = function() {
-  this.intensityValue += 5;
+  this.intensityValue += 8;
 };
 
 IntensityObject.prototype.getIntensity = function() {
