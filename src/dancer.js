@@ -1,32 +1,45 @@
-// Creates and returns a new dancer object that can step
-var makeDancer = function(top, left, timeBetweenSteps) {
+var Dancer = function(name, thresholds, location) {
+  // make node and append
+  
+  var makeDancerElement = function() {
+    // hold array of image links for body
 
-  // use jQuery to create an HTML <span> tag
-  this.$node = $('<span class="dancer"></span>');
-  this.top = top;
-  this.left = left;
-  this.timeBetweenSteps = timeBetweenSteps;
+    // make node
+    // set location
+    // set image
+    // append to document
 
-  this.step();
+    //return node
+  }
 
-  // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
-  // this one sets the position to some random default point within the body
-  this.setPosition(top, left);
+  this.$node;
+  this.thresholds = thresholds;
+  this.intensityLevel = 0;
+  // deal with location
+  // time between steps
+
+  // start looper
+}
+
+// looper function
+  // calls head animation function that toggles css class
+
+Dancer.prototype.checkThreshold = function(intensityValue) {
+  var exceedsCurrentThreshold = intensityValue >= this.threshold[this.intensityLevel];
+  if (exceedsCurrentThreshold) {
+    this.increaseIntensityLevel();
+    this.changeAnimation();
+    // call something that checks the current gif and swaps it with faster one
+  }
 };
 
-makeDancer.prototype.step = function() {
-  // the basic dancer doesn't do anything interesting at all on each step,
-  // it just schedules the next step
-  setTimeout(this.step.bind(this), this.timeBetweenSteps);
-};
+Dancer.prototype.increaseIntensityLevel = function() {
+  this.intensityLevel++;
+}
 
-makeDancer.prototype.setPosition = function(top, left) {
-  // Use css top and left properties to position our <span> tag
-  // where it belongs on the page. See http://api.jquery.com/css/
-  //
-  var styleSettings = {
-    top: top,
-    left: left
-  };
-  this.$node.css(styleSettings);
-};
+Dancer.prototype.changeAnimation = function() {
+  // get reference to dance and head gifs
+  // check for explosion
+    // explode
+    // or change source link on gif by incrementing the file name
+}
