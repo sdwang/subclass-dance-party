@@ -4,7 +4,7 @@ var setup = function () {
   var makeDancers = function() {
     var dancers = [];
     var location = [[],[]];
-    var names = ["Fred", "Allen"];
+    var names = ["fred", "allen"];
 
     var generateThresholds = function() {
       var thresholds = [];
