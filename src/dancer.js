@@ -5,7 +5,7 @@ var Dancer = function(name, thresholds, location) {
     // hold array of image links for body
 
     // make node
-    var $node = $('<div class="dancer" style="float: ' + location + ';"></div>')
+    var $node = $('<div id="' + name + '" class="dancer" style="float: ' + location + ';"></div>')
     // set location
     // set image
     var image = '<img src="img/' + name + '.gif"' + 'alt="' + name + '"/>'
@@ -15,6 +15,8 @@ var Dancer = function(name, thresholds, location) {
     return $node;
   }
 
+  this.name = name;
+  this.location = location;
   this.$node = makeDancerElement(name, location);
   this.thresholds = thresholds;
   this.intensityLevel = 0;
@@ -40,8 +42,12 @@ Dancer.prototype.increaseIntensityLevel = function() {
 }
 
 Dancer.prototype.changeAnimation = function() {
-  // get reference to dance and head gifs
-  // check for explosion
-    // explode
-    // or change source link on gif by incrementing the file name
+  if(this.intensityLevel >= 3) {
+    var newImage = '<img src="img/explosion.gif"' + 'alt="defeated!"/>'
+  } else {
+    var newImage = '<img src="img/' + name + this.intensityLevel + '.gif"' + 'alt="' + name + '"/>'
+  }
+  $('#' + name).empty();
+  $('#' + name).append(newImage);
+
 }
