@@ -1,0 +1,104 @@
+@font-face {
+	font-family: 'disco_divaregular';
+	src: url('fonts/disco_diva-webfont.eot');
+	src: url('fonts/disco_diva-webfont.eot?#iefix') format('embedded-opentype'),
+	url('fonts/disco_diva-webfont.woff2') format('woff2'),
+	url('fonts/disco_diva-webfont.woff') format('woff'),
+	url('fonts/disco_diva-webfont.ttf') format('truetype'),
+	url('fonts/disco_diva-webfont.svg#disco_divaregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'agneyaregular';
+	src: url('fonts/agneya_demo_version-webfont.eot');
+	src: url('fonts/agneya_demo_version-webfont.eot?#iefix') format('embedded-opentype'),
+	url('fonts/agneya_demo_version-webfont.woff2') format('woff2'),
+	url('fonts/agneya_demo_version-webfont.woff') format('woff'),
+	url('fonts/agneya_demo_version-webfont.ttf') format('truetype'),
+	url('fonts/agneya_demo_version-webfont.svg#agneyaregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+body {
+	margin: 0;
+	background: url("../img/danceFloorBackground.jpg") center center no-repeat fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-size: 18px;
+}
+
+.titleContainer {
+	text-align: center;
+}
+
+h1 {
+	font-family: disco_divaregular, sans-serif;
+	font-size: 70px;
+	color: white;
+	font-weight: 100;
+	margin: 30px 0 0 85px;
+}
+
+h1 .discoBall {
+	font-size: 110px;
+}
+
+h2	{
+	font-family: agneyaregular, sans-serif;
+	font-size: 65px;
+	margin: -12px 0 0 0;
+}
+
+.dancerContainer {
+	width: 900px;
+	margin: -40px auto 0 auto;
+	overflow: auto;
+	padding: 0 115px 0 40px;
+	box-sizing: border-box;
+}
+
+.dancerContainer img {
+	width: 120%;
+}
+
+.buttonContainer {
+	text-align: center;
+	width: 200px;
+	height: 60px;
+	padding: 17px 0;
+	left: 50%;
+	margin-left: -100px;
+	position: fixed;
+	bottom: 60px;
+	background-color: #ffd764;
+	box-sizing: border-box;
+}
+
+
+
+/*.title, .addDancerButton {*/
+	/*padding: 5px 12px;*/
+	/*float: right;*/
+/*}*/
+
+/*.topbar {*/
+	/*height: 32px;*/
+	/*background-color: #555;*/
+/*}*/
+
+/*.title {*/
+	/*background-color: #777;*/
+/*}*/
+
+/*.dancer {*/
+	/*border: 10px solid red;*/
+	/*border-radius: 10px;*/
+	/*position: absolute;*/
+/*}*/
