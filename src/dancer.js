@@ -5,10 +5,10 @@ var Dancer = function(name, thresholds, location) {
     // hold array of image links for body
 
     // make node
-    var $node = $('<div id="' + name + '" class="dancer" style="float: ' + location + ';"></div>')
+    var $node = $('<div id="' + name + '" class="dancer" style="float: ' + location + ';" width="400px"></div>')
     // set location
     // set image
-    var image = '<img class="dancerImage" src="img/' + name + '.gif"' + 'alt="' + name + '"/>'
+    var image = '<img class="dancerImage" src="img/' + name + '.gif"' + 'alt="' + name + '" width="365px"/>'
     // append to document
     $node.append(image);
     //return node

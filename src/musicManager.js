@@ -9,8 +9,8 @@ var MusicManager = function(intensityLevel) {
 
 MusicManager.prototype.explosion = function() {
   //play explosion
-  var explosionSound = '<audio class="explosionSound" autoplay="false"><source src="audio/explosion.mp3" type="audio/mp3"><source src="audio/explosion.wav" type="audio/wav">I' + "'" + 'm sorry; your browser doesn' + "'" + 't support .mp3 or .wav audio format.</audio>'
-  $('.sound').append(explosionSound);
+  // var explosionSound = '<audio class="explosionSound" autoplay="false"><source src="audio/explosion.mp3" type="audio/mp3"><source src="audio/explosion.wav" type="audio/wav">I' + "'" + 'm sorry; your browser doesn' + "'" + 't support .mp3 or .wav audio format.</audio>'
+  // $('.sound').append(explosionSound);
 };
 
 MusicManager.prototype.setPlaybackRate = function(intensityLevel) {
