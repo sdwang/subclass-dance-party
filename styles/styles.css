@@ -36,6 +36,17 @@ body {
 
 .titleContainer {
 	text-align: center;
+	padding-top: 20px;
+}
+
+.topLineContainer {
+	display: inline-block;
+	margin: 0 auto;
+	padding-left: 90px;
+}
+
+.secondLine {
+	margin-top: -35px;
 }
 
 h1 {
@@ -43,24 +54,35 @@ h1 {
 	font-size: 70px;
 	color: white;
 	font-weight: 100;
-	margin: 30px 0 0 85px;
+	/*margin: 30px 0 0 85px;*/
+	display: inline-block;
+	text-shadow: 0 3px 3px rgba(0,0,0,.4);
+	float: left;
 }
 
-h1 .discoBall {
-	font-size: 110px;
+.discoBallContainer {
+	display: inline-block;
+}
+
+#discoBall {
+	margin: 20px 15px 0 15px;
+	float: left;
 }
 
 h2	{
 	font-family: agneyaregular, sans-serif;
-	font-size: 65px;
+	font-size: 80px;
 	margin: -12px 0 0 0;
+	background: -webkit-linear-gradient(left, #FD1D1D 48%, #5C5EE8 55%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .dancerContainer {
 	width: 900px;
-	margin: -40px auto 0 auto;
+	margin: -50px auto 0 auto;
 	overflow: auto;
-	padding: 0 115px 0 40px;
+	padding: 0 115px 0 50px;
 	box-sizing: border-box;
 }
 
@@ -68,7 +90,10 @@ h2	{
 	width: 120%;
 }
 
-.buttonContainer {
+button {
+	border-radius: 10px;
+	border-style: none;
+	color: #2a2a2a;
 	text-align: center;
 	width: 200px;
 	height: 60px;
@@ -77,8 +102,56 @@ h2	{
 	margin-left: -100px;
 	position: fixed;
 	bottom: 60px;
-	background-color: #ffd764;
 	box-sizing: border-box;
+	box-shadow: 0 0 60px rgba(192, 192, 192, .4);
+	font-family: agneyaregular;
+	font-size: 35px;
+	background: -webkit-radial-gradient(#fdf8a1, #e7e83f);
+}
+
+button:focus {
+	outline: 0;
+}
+
+button:active {
+	background: -webkit-radial-gradient(#fd303f, #8d080d);
+}
+
+@-webkit-keyframes hvr-pulse-grow {
+	to {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+}
+
+@keyframes hvr-pulse-grow {
+	to {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+}
+
+.hvr-pulse-grow {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+.hvr-pulse-grow:hover, .hvr-pulse-grow:focus, .hvr-pulse-grow:active {
+	-webkit-animation-name: hvr-pulse-grow;
+	animation-name: hvr-pulse-grow;
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	animation-direction: alternate;
 }
 
 

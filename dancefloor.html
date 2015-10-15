@@ -6,14 +6,13 @@
     <script src="lib/jquery.js"></script>
   </head>
   <body>
-    <!--<div class="topbar">-->
-      <!--<span class="title">object dance party</span>-->
-      <!--<a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>-->
-    <!--</div>-->
-
     <div class="titleContainer">
-        <h1>FRED <span class="discoBall">o</span> ALLEN</h1>
-        <h2>dance off</h2>
+        <div class="topLineContainer">
+            <h1>FRED</h1>
+            <img id="discoBall" src="img/discoBall.gif" width="140px"/>
+            <h1>ALLEN</h1>
+        </div>
+        <h2 class="secondLine">dance off</h2>
     </div>
     <div class="dancerContainer">
         <div class="dancer" style="float: left;">
@@ -23,9 +22,9 @@
             <img src="img/deadPool.gif" alt="Dancing Deadpool"/>
         </div>
     </div>
-    <div class="buttonContainer">
-        <span>Pump It Up</span>
-    </div>
+    <button class="buttonContainer hvr-pulse-grow">
+        <span>Max Out!</span>
+    </button>
     <script src="src/dancer.js"></script>
     <script src="src/danceManager.js"></script>
     <script src="src/setupObject.js"></script>
