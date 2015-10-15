@@ -8,7 +8,7 @@ var Dancer = function(name, thresholds, location) {
     var $node = $('<div id="' + name + '" class="dancer" style="float: ' + location + ';"></div>')
     // set location
     // set image
-    var image = '<img src="img/' + name + '.gif"' + 'alt="' + name + '"/>'
+    var image = '<img class="dancerImage" src="img/' + name + '.gif"' + 'alt="' + name + '"/>'
     // append to document
     $node.append(image);
     //return node
@@ -45,9 +45,9 @@ Dancer.prototype.increaseIntensityLevel = function() {
 
 Dancer.prototype.changeAnimation = function() {
   if(this.intensityLevel >= 3) {
-    var newImage = '<img src="img/explosion.gif"' + 'alt="defeated!"/>'
+    var newImage = '<img src="img/explosion.gif"' + 'alt="defeated!" width="355px" height="535px"/>'
   } else {
-    var newImage = '<img src="img/' + this.name + this.intensityLevel + '.gif"' + 'alt="' + this.name + '"/>'
+    var newImage = '<img class="dancerImage" src="img/' + this.name + this.intensityLevel + '.gif"' + 'alt="' + this.name + '"/>'
   }
   $('#' + this.name).empty();
   $('#' + this.name).append(newImage);
