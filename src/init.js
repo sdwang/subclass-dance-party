@@ -30,5 +30,13 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
   });
+
+  $(".buttonContainer").on("click", function(event) {
+    //Increase music playback speed
+    //Increment the intensity level
+    console.log('button click');
+    danceApp.controller.intensityButtonHandler();
+  });
+
 });
 

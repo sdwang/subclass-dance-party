@@ -29,7 +29,8 @@ var Dancer = function(name, thresholds, location) {
   // calls head animation function that toggles css class
 
 Dancer.prototype.checkThreshold = function(intensityValue) {
-  var exceedsCurrentThreshold = intensityValue >= this.threshold[this.intensityLevel];
+  console.log("Intensity Value: ", intensityValue, "Threshold: ", this.thresholds[this.intensityLevel]);
+  var exceedsCurrentThreshold = intensityValue >= this.thresholds[this.intensityLevel];
   if (exceedsCurrentThreshold) {
     this.increaseIntensityLevel();
     this.changeAnimation();
@@ -39,15 +40,16 @@ Dancer.prototype.checkThreshold = function(intensityValue) {
 
 Dancer.prototype.increaseIntensityLevel = function() {
   this.intensityLevel++;
+  console.log("Intensity Level: ", this.intensityLevel);
 }
 
 Dancer.prototype.changeAnimation = function() {
   if(this.intensityLevel >= 3) {
     var newImage = '<img src="img/explosion.gif"' + 'alt="defeated!"/>'
   } else {
-    var newImage = '<img src="img/' + name + this.intensityLevel + '.gif"' + 'alt="' + name + '"/>'
+    var newImage = '<img src="img/' + this.name + this.intensityLevel + '.gif"' + 'alt="' + this.name + '"/>'
   }
-  $('#' + name).empty();
-  $('#' + name).append(newImage);
+  $('#' + this.name).empty();
+  $('#' + this.name).append(newImage);
 
 }
