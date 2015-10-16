@@ -5,10 +5,10 @@ var Dancer = function(name, thresholds, location) {
     // hold array of image links for body
 
     // make node
-    var $node = $('<div id="' + name + '" class="dancer" style="float: ' + location + ';"></div>')
+    var $node = $('<div id="' + name + '" class="dancer" style="float: ' + location + ';" width="400px"></div>')
     // set location
     // set image
-    var image = '<img class="dancerImage" src="img/' + name + '.gif"' + 'alt="' + name + '"/>'
+    var image = '<img class="dancerImage" src="img/' + name + '.gif"' + 'alt="' + name + '" width="365px"/>'
     // append to document
     $node.append(image);
     //return node
@@ -43,14 +43,22 @@ Dancer.prototype.increaseIntensityLevel = function() {
   console.log("Intensity Level: ", this.intensityLevel);
 }
 
+Dancer.prototype.removeAnimation = function() {
+  $('#' + this.name).empty();
+};
+
 Dancer.prototype.changeAnimation = function() {
   if(this.intensityLevel >= 3) {
     var event = new Event('explode');
     document.dispatchEvent(event);
     var newImage = '<img src="img/explosion.gif"' + 'alt="defeated!" width="355px" height="535px"/>'
+    this.removeAnimation();
+    $('#' + this.name).append(newImage);
+    setTimeout(this.removeAnimation.bind(this), 1500);
   } else {
-    var newImage = '<img class="dancerImage" src="img/' + this.name + this.intensityLevel + '.gif"' + 'alt="' + this.name + '"/>'
+    var newImage = '<img class="dancerImage" src="img/' + this.name + this.intensityLevel + '.gif"' + 'alt="' + this.name + '" width="365px"/>'
+    this.removeAnimation();
+    $('#' + this.name).append(newImage);
   }
-  $('#' + this.name).append(newImage);
-  $('#' + this.name).empty();
+
 }

@@ -77,15 +77,23 @@ h2	{
 }
 
 .dancerContainer {
-	width: 900px;
+	width: 1100px;
 	margin: -50px auto 0 auto;
 	overflow: auto;
-	padding: 0 115px 0 50px;
+	padding-left: 70px;
 	box-sizing: border-box;
 }
 
-.dancerImage {
+/*.dancer {
 	width: 120%;
+}
+
+#fred > img {
+	width: 120%;
+}*/
+
+#allen > img {
+	width: 400px;
 }
 
 button {

@@ -1,15 +1,12 @@
 var MusicManager = function(intensityLevel) {
   //Increment music speed
-  
-  //Listen for explosion event
-    //play explosion sound bite
-  document.addEventListener('explode', this.explosion(), false);
+  document.addEventListener('explode', this.explosion, false);
 
 };
 
 MusicManager.prototype.explosion = function() {
-  //play explosion
-  var explosionSound = '<audio class="explosionSound" autoplay="false"><source src="audio/explosion.mp3" type="audio/mp3"><source src="audio/explosion.wav" type="audio/wav">I' + "'" + 'm sorry; your browser doesn' + "'" + 't support .mp3 or .wav audio format.</audio>'
+  console.log('Explode!');
+  var explosionSound = '<audio class="explosionSound" src="audio/explosion.wav" autoplay>Your browser does not support the <code>audio</code> element.</audio>'
   $('.sound').append(explosionSound);
 };
 
