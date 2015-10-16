@@ -11,6 +11,6 @@ MusicManager.prototype.explosion = function() {
 };
 
 MusicManager.prototype.setPlaybackRate = function(intensityLevel) {
-  $('audio').playbackRate = 1 + intensityLevel * 0.25;
+  document.getElementsByClassName('sandStorm')[0].playbackRate = 1 + intensityLevel * 0.005;
 };
 

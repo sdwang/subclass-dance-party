@@ -54,7 +54,7 @@ Dancer.prototype.changeAnimation = function() {
     var newImage = '<img src="img/explosion.gif"' + 'alt="defeated!" width="355px" height="535px"/>'
     this.removeAnimation();
     $('#' + this.name).append(newImage);
-    setTimeout(this.removeAnimation.bind(this), 1500);
+    setTimeout(this.removeAnimation.bind(this), 1200);
   } else {
     var newImage = '<img class="dancerImage" src="img/' + this.name + this.intensityLevel + '.gif"' + 'alt="' + this.name + '" width="365px"/>'
     this.removeAnimation();
